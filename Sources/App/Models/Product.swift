@@ -6,7 +6,9 @@
 //
 import FluentSQLite
 import Vapor
-final class Product: SQLiteModel {
+import FluentPostgreSQL
+
+final class Product: PostgreSQLModel {
     /// The unique identifier for this `Todo`.
     var id: Int?
     

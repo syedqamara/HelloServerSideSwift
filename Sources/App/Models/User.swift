@@ -1,8 +1,9 @@
 import FluentSQLite
 import Vapor
+import FluentPostgreSQL
 
 /// A single entry of a Todo list.
-final class User: SQLiteModel {
+final class User: PostgreSQLModel {
     /// The unique identifier for this `Todo`.
     var id: Int?
 

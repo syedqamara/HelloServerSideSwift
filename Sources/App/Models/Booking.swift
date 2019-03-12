@@ -6,11 +6,11 @@
 //
 import FluentSQLite
 import Vapor
+import FluentPostgreSQL
 
 
 
-
-final class Booking: SQLiteModel {
+final class Booking: PostgreSQLModel {
     /// The unique identifier for this `Todo`.
     var id: Int?
     
