@@ -6,8 +6,20 @@
 //
 
 import Vapor
+import FluentSQLite
 
-struct BookingResponse: Content {
+final class BookingResponse: Content {
+    var message: String
+    var success: Bool
+    var data: [BookingM]
+    init(value: Bool = false) {
+        success = value
+        data = []
+        message = ""
+    }
+}
+
+final class BookingM: SQLiteModel {
     var id: Int?
     var user: User?
     var product: Product?
@@ -19,3 +31,15 @@ struct BookingResponse: Content {
         count = nil
     }
 }
+
+/// Allows `Todo` to be encoded to and decoded from HTTP messages.
+
+/// Allows `Todo` to be used as a dynamic parameter in route definitions.
+
+extension BookingM: Migration { }
+
+/// Allows `Todo` to be encoded to and decoded from HTTP messages.
+extension BookingM: Content { }
+
+/// Allows `Todo` to be used as a dynamic parameter in route definitions.
+extension BookingM: Parameter { }

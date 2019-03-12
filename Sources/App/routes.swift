@@ -24,7 +24,7 @@ public func routes(_ router: Router) throws {
     
     // Example of configuring a controller
     let bookingController = BookingController()
-    router.get("api/allbookings", use: bookingController.index)
+    router.post("api/allbookings", use: bookingController.index)
     router.post("api/newbooking", use: bookingController.create)
     router.post("api/delete", use: bookingController.delete)
 }

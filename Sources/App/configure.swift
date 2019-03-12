@@ -19,7 +19,6 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
 
     // Configure a SQLite database
     let sqlite = try SQLiteDatabase(storage: .file(path: "/Users/syedqamar/Documents/SwiftServerSide/Hello/project.db"))
-    
     /// Register the configured SQLite database to the database config.
     var databases = DatabasesConfig()
     databases.add(database: sqlite, as: .sqlite)
