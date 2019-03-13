@@ -53,7 +53,13 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     var databases = DatabasesConfig()
     let databaseConfig: PostgreSQLDatabaseConfig
     if let url = Environment.get("DATABASE_URL") {
-        databaseConfig = (try PostgreSQLDatabaseConfig(url: url)!)
+        do {
+            databaseConfig = (try PostgreSQLDatabaseConfig(url: url)!)
+        }catch let error {
+            print("Failed to load database")
+            return
+        }
+        
     }
     else {
         databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: ProductionDBConfig.password)
