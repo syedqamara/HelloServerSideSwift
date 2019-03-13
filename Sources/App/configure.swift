@@ -3,10 +3,10 @@ import Vapor
 import FluentPostgreSQL
 
 struct ProductionDBConfig {
-    static let hostName = "ec2-23-21-128-35.compute-1.amazonaws.com"
-    static let database = "df0oq560t871fj"
-    static let user = "ombincjjukuspa"
-    static let password = "a182906dce9e671d41e049d69cc407193881a2e1e0109a564f066c243c590398"
+    static let hostName = "ec2-50-19-109-120.compute-1.amazonaws.com"
+    static let database = "dbks3hp3m3ud6v"
+    static let user = "yknolfuyqxnlfj"
+    static let password = "a477cecb0aa5f6662d92be164e5ece202871b2583defcea4f273a89a97dda11d"
     static let uri = "postgres://ombincjjukuspa:a182906dce9e671d41e049d69cc407193881a2e1e0109a564f066c243c590398@ec2-23-21-128-35.compute-1.amazonaws.com:5432/df0oq560t871fj"
     static let port = 5432
     static let cli = "heroku pg:psql postgresql-fluffy-74254 --app helloswiftdemo"
@@ -53,13 +53,13 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     var databases = DatabasesConfig()
     let databaseConfig: PostgreSQLDatabaseConfig
     if let url = Environment.get("DATABASE_URL") {
-        do {
-            databaseConfig = (try PostgreSQLDatabaseConfig(url: url)!)
-        }catch let error {
-            print("Failed to load database")
-            return
-        }
-        
+//        do {
+//            databaseConfig = (try PostgreSQLDatabaseConfig(url: url)!)
+//        }catch let error {
+//            print("Failed to load database")
+//            return
+//        }
+        databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: ProductionDBConfig.password)
     }
     else {
         databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: ProductionDBConfig.password)
