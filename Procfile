@@ -1,2 +1,1 @@
-Web: App --env=production --workdir="./"
-Web: App --env=production --workdir=./ --config:servers.default.port=$PORT --config:postgresql.url=$DATABASE_URL
+web: HelloWorld --workers 5 --bind 0.0.0.0:$PORT
