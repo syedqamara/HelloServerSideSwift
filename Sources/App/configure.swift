@@ -42,7 +42,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
      services.register(migrations)
     */
     
-    try services.register(PostgreSQLProvider())
+    try services.register(FluentPostgreSQLProvider())
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
     /// middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response

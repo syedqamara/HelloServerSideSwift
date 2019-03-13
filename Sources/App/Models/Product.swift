@@ -16,10 +16,10 @@ final class Product: PostgreSQLModel {
     var name: String
     var image_url: String
     var description: String
-    var price: Double?
+    var price: Int?
     
     /// Creates a new `Todo`.
-    init(id: Int? = nil, name: String, image_url: String, description: String, price: Double) {
+    init(id: Int? = nil, name: String, image_url: String, description: String, price: Int) {
         self.id = id
         self.name = name
         self.image_url = image_url
