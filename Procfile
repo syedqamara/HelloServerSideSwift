@@ -1,1 +1,1 @@
-web: Run --env=production --port=$PORT
+web: serve Run --env=production --port=$PORT
