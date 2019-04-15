@@ -21,9 +21,19 @@
 
 
 # Introduction 
-To built your web-application with Swift you need to first install its framework. There are some Swift frameworks available  1: Vapor 2: Perfect 3: Kitura 
+To built your web-application with Swift you need to first install its framework. There are some Swift frameworks available  
+1: Vapor 
+2: Perfect
+3: Kitura 
 # Vapor
- But this repo used Swift with Vapor. To use vapor you need to have Vapor installed on your machine & Xcode should be installed too.  ##Install Vapor  To install Vapor use bellow commands.  ```brew tap vapor/tap```
+ But this repo used Swift with Vapor. To use vapor you need to have Vapor installed on your machine & Xcode should be installed too.  
+ 
+## Install Vapor  
+ 
+ To install Vapor use bellow commands.  
+ 
+```brew tap vapor/tap```
+
 ```brew install vapor/tap/vapor```
 
 ## Create New Project
@@ -34,6 +44,7 @@ Now go to your desired directory where you want to create a new Project. And pas
 ```vapor new YourProjectName```
 
 Once that finishes, change into the newly created directory.
+
 
 ```cd YourProjectName```
 
