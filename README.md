@@ -21,10 +21,14 @@
 
 
 # Introduction 
-To built your web-application with Swift you need to first install its framework. There are some Swift frameworks available  
-1: Vapor 
+To built your web-application with Swift you need to first install its framework. There are some Swift frameworks available 
+
+1: Vapor
+
 2: Perfect
-3: Kitura 
+
+3: Kitura
+
 # Vapor
  But this repo used Swift with Vapor. To use vapor you need to have Vapor installed on your machine & Xcode should be installed too.  
  
