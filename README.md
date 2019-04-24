@@ -58,6 +58,24 @@ Let's now use the Vapor Toolbox's Ccode command to generate an Xcode project. Th
 
 ```vapor xcode```
 
+### Create Database.
+
+For creating database with `PostgreSQL` <a href="we can use https://github.com/PostgresApp/PostgresApp/releases/download/v2.2.2/Postgres-2.2.2-11.dmg">
+        <img src="https://img.shields.io/badge/Download-PostgreSQL-f47139.svg" alt="Download">
+    </a> and then below steps.
+    
+
+```
+ - Download
+ - Install
+ - Initialze
+```
+
+After initialzing double click default database and it will open `terminal` just paste below lines and your database will be created.
+
+``` sql
+CREATE DATABASE YourDatabaseName;
+```
 
 To build either you can use command or Xcode’s Play button at the top left. (But you need to choose ```Run``` from your provided targets.)
 
