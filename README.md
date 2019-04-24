@@ -70,7 +70,7 @@ vapor xcode
 
 ### Create Database.
 
-For creating database with `PostgreSQL` <a href="we can use https://github.com/PostgresApp/PostgresApp/releases/download/v2.2.2/Postgres-2.2.2-11.dmg">
+For creating database with `PostgreSQL` <a href="https://github.com/PostgresApp/PostgresApp/releases/download/v2.2.2/Postgres-2.2.2-11.dmg">
         <img src="https://img.shields.io/badge/Download-PostgreSQL-f47139.svg" alt="Download">
     </a> and then below steps.
     
