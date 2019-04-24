@@ -27,4 +27,11 @@ public func routes(_ router: Router) throws {
     router.post("api/allbookings", use: bookingController.index)
     router.post("api/newbooking", use: bookingController.create)
     router.post("api/delete", use: bookingController.delete)
+    
+    // Example of configuring a controller
+    let deepController = DeeplinkController()
+    router.post("api/newDeeplink", use: deepController.deeplink)
+    router.post("api/deeplinks", use: deepController.deeplinks)
+    router.post("api/removeDeeplink", use: deepController.removeDeeplink)
+    
 }
