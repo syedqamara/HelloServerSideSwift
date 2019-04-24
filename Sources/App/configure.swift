@@ -3,13 +3,13 @@ import Vapor
 import FluentPostgreSQL
 
 struct ProductionDBConfig {
-    static let hostName = "ec2-50-19-109-120.compute-1.amazonaws.com"
-    static let database = "dbks3hp3m3ud6v"
-    static let user = "yknolfuyqxnlfj"
-    static let password = "a477cecb0aa5f6662d92be164e5ece202871b2583defcea4f273a89a97dda11d"
-    static let uri = "postgres://ombincjjukuspa:a182906dce9e671d41e049d69cc407193881a2e1e0109a564f066c243c590398@ec2-23-21-128-35.compute-1.amazonaws.com:5432/df0oq560t871fj"
+    static let hostName = "localhost"
+    static let database = "PostgreSQL 9.6"
+    static let user = "postgres"
+    static let password: String? = nil // = "a477cecb0aa5f6662d92be164e5ece202871b2583defcea4f273a89a97dda11d"
+    static let uri: String? = nil// = "postgres://ombincjjukuspa:a182906dce9e671d41e049d69cc407193881a2e1e0109a564f066c243c590398@ec2-23-21-128-35.compute-1.amazonaws.com:5432/df0oq560t871fj"
     static let port = 5432
-    static let cli = "heroku pg:psql postgresql-fluffy-74254 --app helloswiftdemo"
+    static let cli : String? = nil
 }
 
 /// Called before your application initializes.
@@ -59,7 +59,8 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
         databaseConfig = configObject
     }
     else {
-        databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: ProductionDBConfig.password)
+        databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "syedqamar", database: "myfirstdb", password: nil, transport: .cleartext)
+//        databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: nil)
 //        databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "anapaix", database: "postgrestutorial", password: nil)
 
     }
