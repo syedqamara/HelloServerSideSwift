@@ -36,27 +36,37 @@ To built your web-application with Swift you need to first install its framework
  
  To install Vapor use bellow commands.  
  
-```brew tap vapor/tap```
+``` bash
+brew tap vapor/tap
+```
 
-```brew install vapor/tap/vapor```
+``` bash
+brew install vapor/tap/vapor
+```
 
 ## Create New Project
 Now go to your desired directory where you want to create a new Project. And paste the following command.
 
 ### Vapor Project
 
-```vapor new YourProjectName```
+``` bash 
+vapor new YourProjectName
+```
 
 Once that finishes, change into the newly created directory.
 
 
-```cd YourProjectName```
+``` bash
+cd YourProjectName
+```
 
 ### Generate Xcode Project
 
 Let's now use the Vapor Toolbox's Ccode command to generate an Xcode project. This will allow us to build and run our app from inside of Xcode, just like an iOS app.
 
-```vapor xcode```
+``` bash
+vapor xcode
+```
 
 ### Create Database.
 
@@ -65,11 +75,11 @@ For creating database with `PostgreSQL` <a href="we can use https://github.com/P
     </a> and then below steps.
     
 
-```
- - Download
- - Install
- - Initialze
-```
+
+    1: Download
+    2: Install
+    3: Initialze
+
 
 After initialzing double click default database and it will open `terminal` just paste below lines and your database will be created.
 
@@ -77,6 +87,10 @@ After initialzing double click default database and it will open `terminal` just
 CREATE DATABASE YourDatabaseName;
 ```
 
-To build either you can use command or Xcode’s Play button at the top left. (But you need to choose ```Run``` from your provided targets.)
+Now in your `configure.swift` file replace `username` with your selected database name on which you have double clicked and `database` name with *YourDatabaseName*.
+
+### Build
+
+To build either you can use command or Xcode’s Play button at the top left. (But you need to choose ```Run``` from your provided targets.
 
 
