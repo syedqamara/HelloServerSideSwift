@@ -32,6 +32,9 @@ To built your web-application with Swift you need to first install its framework
 
 3: Kitura
 
+# Deployed APIS
+Master branch of this repo is deployed on `Heroko`. You can test the deployed apis by reading the <a href=https://documenter.getpostman.com/view/1828110/S17kyB1R>Documentation </a>.
+
 # Vapor
  But this repo used Swift with Vapor. To use vapor you need to have Vapor installed on your machine & Xcode should be installed too.  
  
@@ -90,7 +93,7 @@ After initialzing double click default database and it will open `terminal` just
 CREATE DATABASE YourDatabaseName;
 ```
 
-Now in your `configure.swift` file replace `username` with your selected database name on which you have double clicked and `database` name with *YourDatabaseName*.
+Now in your `configure.swift` file replace `username` with your selected database name on which you have double clicked and `database` name with **YourDatabaseName**.
 
 ### Build
 
