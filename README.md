@@ -103,5 +103,6 @@ To build either you can use command or Xcode’s Play button at the top left. (B
 Primary contributors for this repository are following. But we thanks to all of those who read/fork/raise an issue on this repo, because without there contribution we won't be able to stabalise it.
 
 <a href=syedqamar.a1@gmail.com> Syed Qamar Abbas</a>
+
 <a href=umairsharif99@gmail.com> Umair Sharif</a>
 
