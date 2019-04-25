@@ -17,6 +17,9 @@
     <a href="https://swift.org">
         <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
     </a>
+    <a href="https://www.facebook.com/syedqamar.a">
+        <img src="http://img.shields.io/badge/Developer-Syed_Qamar-iOS.svg" alt="Swift 4.1">
+    </a>
 </center>
 
 
