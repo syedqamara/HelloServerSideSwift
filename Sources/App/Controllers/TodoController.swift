@@ -1,5 +1,6 @@
 import Vapor
 import FluentSQLite
+import Multipart
 
 
 /// Controls basic CRUD operations on `Todo`s.
@@ -49,5 +50,15 @@ final class TodoController {
         return try req.parameters.next(User.self).flatMap { todo in
             return todo.delete(on: req)
         }.transform(to: .ok)
+    }
+    func upload(_ req: Request) throws -> Future<HTTPStatus> {
+        return try req.content.decode(Upload.self).map(to: HTTPStatus.self) { user in
+            print(user.name) // "Vapor"
+            print(user.age) // 3
+            print(user.image) // Raw image data
+            print(user.isAdmin)
+            
+            return .ok
+        }
     }
 }

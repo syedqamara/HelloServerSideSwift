@@ -1,4 +1,6 @@
 import Vapor
+import Leaf
+
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
@@ -12,6 +14,7 @@ public func routes(_ router: Router) throws {
     router.get("api/users", use: todoController.index)
     router.post("api/register", use: todoController.create)
     router.post("api/login", use: todoController.login)
+    router.post("api/new_upload", use: todoController.upload)
     
     
     
@@ -34,4 +37,10 @@ public func routes(_ router: Router) throws {
     router.post("api/deeplinks", use: deepController.deeplinks)
     router.post("api/removeDeeplink", use: deepController.removeDeeplink)
     
+    
+    router.get("upload") { req -> Future<View> in
+        return try req.view().render("upload.leaf")
+    }
+
 }
+

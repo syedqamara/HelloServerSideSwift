@@ -1,0 +1,9 @@
+<HTML>
+    <BODY>
+        <form method="POST" action="/users" enctype="multipart/form-data">
+            <input type="text" name="name">
+            <input type="text" name="age">
+            <input type="file" name="image">
+        </form>
+    </BODY>
+</HTML>

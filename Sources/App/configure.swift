@@ -1,6 +1,8 @@
 import FluentSQLite
 import Vapor
 import FluentPostgreSQL
+import Leaf
+
 
 struct ProductionDBConfig {
     static let hostName = "localhost"
@@ -43,6 +45,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     */
     
     try services.register(FluentPostgreSQLProvider())
+    try services.register(LeafProvider())
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
     /// middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
@@ -75,5 +78,8 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     migrations.add(model: Booking.self, database: .psql)
     migrations.add(model: Deeplink.self, database: .psql)
     services.register(migrations)
+    
+    
+    config.prefer(LeafRenderer.self, for: ViewRenderer.self)
 
 }

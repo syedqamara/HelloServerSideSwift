@@ -1,0 +1,44 @@
+<HTML>
+    <style>
+        body {
+            color: red;
+        }
+        h1 {
+            color: #FF5733;
+        }
+
+        h3 {
+            color: #28B463;
+        }
+        p {
+            color: rgb(0,0,255)
+        }
+
+        input {
+            color: #28B463;
+        }
+    </style>
+    <HEADER>
+        <H1>Upload File</H1>
+    </HEADER>
+    <BODY>
+        <H3 color=#FF5733>Vertical Form</H3>
+        <BR>
+        <form method="POST" action="/api/new_upload" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Name..."><BR>
+            <input type="text" name="age" placeholder="Age..."><BR>
+            <input type="file" name="image"><BR>
+            <input type="submit" value="Submit">
+        </form>
+
+        <BR>
+        <H3>Horizontal Form</H3>
+        <BR>
+        <form method="POST" action="/api/new_upload" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Name...">
+            <input type="text" name="age" placeholder="Age...">
+            <input type="file" name="image"><BR>
+            <input type="submit" value="Submit">
+        </form>
+    </BODY>
+</HTML>
