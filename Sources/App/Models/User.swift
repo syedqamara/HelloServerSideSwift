@@ -1,6 +1,7 @@
 import FluentSQLite
 import Vapor
 import FluentPostgreSQL
+import Authentication
 
 enum UserType: String {
     case admin = "admin"
@@ -52,5 +53,23 @@ extension User {
             return t
         }
         return .unknown
+    }
+}
+
+final class AuthUser: Content {
+    var email: String
+    var passwordHash: String
+}
+
+extension User: PasswordAuthenticatable {
+    
+    /// See `PasswordAuthenticatable`.
+    static var usernameKey: WritableKeyPath<User, String> {
+        return \.email
+    }
+    
+    /// See `PasswordAuthenticatable`.
+    static var passwordKey: WritableKeyPath<User, String> {
+        return \.password
     }
 }

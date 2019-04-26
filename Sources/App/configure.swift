@@ -6,12 +6,10 @@ import Leaf
 
 struct ProductionDBConfig {
     static let hostName = "localhost"
-    static let database = "PostgreSQL 9.6"
-    static let user = "postgres"
-    static let password: String? = nil // = "a477cecb0aa5f6662d92be164e5ece202871b2583defcea4f273a89a97dda11d"
-    static let uri: String? = nil// = "postgres://ombincjjukuspa:a182906dce9e671d41e049d69cc407193881a2e1e0109a564f066c243c590398@ec2-23-21-128-35.compute-1.amazonaws.com:5432/df0oq560t871fj"
+    static let database = "myfirstdb"
+    static let user = "syedqamar"
+    static let password: String? = nil
     static let port = 5432
-    static let cli : String? = nil
 }
 
 /// Called before your application initializes.
@@ -62,9 +60,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
         databaseConfig = configObject
     }
     else {
-        databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "syedqamar", database: "myfirstdb", password: nil, transport: .cleartext)
-//        databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: nil)
-//        databaseConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "anapaix", database: "postgrestutorial", password: nil)
+        databaseConfig = PostgreSQLDatabaseConfig(hostname: ProductionDBConfig.hostName, port: ProductionDBConfig.port, username: ProductionDBConfig.user, database: ProductionDBConfig.database, password: ProductionDBConfig.password, transport: .cleartext)
 
     }
     let database = PostgreSQLDatabase(config: databaseConfig)
