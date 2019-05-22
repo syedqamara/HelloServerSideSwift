@@ -106,5 +106,5 @@ Primary contributors for this repository are following. But we thanks to all of 
 
 <a href=mailto://umairsharif99@gmail.com> Umair Sharif</a>
 
-<a href=http://entertainer://newOrderRecieved?orderId=1234> Click Here </a>
+<a href="entertainer://newOrderRecieved?orderId=1234"> Click Here </a>
 
